@@ -1,0 +1,52 @@
+.Word {
+  height: 100vh;
+
+  .text {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    font-size: 2em;
+  }
+
+  input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+  }
+
+  .tries {
+    // height: 500px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 10px;
+    font-size: 2em;
+    .word-container {
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .letter-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid black;
+      margin: 5px;
+      padding: 20px;
+      height: 10px;
+      width: 10px;
+      //   background-color: red;
+    }
+  }
+
+  .correct {
+    color: white;
+    background: green;
+  }
+
+  .almost-correct {
+    color: white;
+    background: orange;
+  }
+}
