@@ -32,6 +32,10 @@ export default function Word() {
       return null;
     }
 
+    if (event.keyCode === 38) {
+      setTries(tries + 1);
+    }
+
     if (event.key === 'Enter') {
       if (event.target.value.length !== answer.length) {
         alert('write more letters');
