@@ -101,9 +101,12 @@ export default function Word() {
 
   return (
     <div className="Word">
+      <h1>Guess a champion with {answer.length} letters</h1>
       <div className="tries text">Tries Left: {tries}</div>
-      <div className="points text">Points: {points}</div>
-      <div className="points text">Highscore: {highscore}</div>
+      <div className="scores">
+        <div className="points text">Current Streak: {points}</div>
+        <div className="points text">Highscore: {highscore}</div>
+      </div>
       <div className="tries">{renderTries()}</div>
       <input
         value={input}
