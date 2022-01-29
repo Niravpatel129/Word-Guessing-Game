@@ -1,5 +1,5 @@
 import { useLocalStorage, writeStorage } from '@rehooks/local-storage';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import './Word.scss';
 import wordsArray from './words/words';
@@ -15,6 +15,12 @@ export default function Word() {
   const [tries, setTries] = useState(totalTries);
   const [points, setPoints] = useState(0);
   const [highscore] = useLocalStorage('points'); // send the key to be tracked.
+
+  useEffect(() => {
+    if (!highscore) {
+      writeStorage('points', 0);
+    }
+  }, [highscore]);
 
   const fetchWord = () => {
     return wordsArray[Math.floor(Math.random() * wordsArray.length)].toLowerCase();
