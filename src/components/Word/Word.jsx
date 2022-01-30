@@ -27,7 +27,7 @@ export default function Word() {
   };
 
   const handleCorrect = () => {
-    setTries(5);
+    setTries(totalTries);
 
     setWords([]);
     setAnswer(fetchWord());
